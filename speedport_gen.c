@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int main(int argc, char** argv) {
     if(argc != 3){
@@ -30,10 +31,16 @@ int main(int argc, char** argv) {
         return 1;
     }
 
+    char essid9 = (char) toupper(essid[9]);
+    char essid10 = (char) toupper(essid[10]);
+    char bssid13 = (char) toupper(bssid[13]);
+    char bssid15 = (char) toupper(bssid[15]);
+    char bssid16 = (char) toupper(bssid[16]);
+
     for(int x = 0; x < 16; x++)
     for(int y = 0; y < 16; y++)
     for(int z = 0; z < 16; z++)
-        printf("SP-%c%X%c%c%c%c%X%X%X\n", essid[9], z, essid[10], bssid[13], bssid[15], bssid[16], x, y, z);
+        printf("SP-%c%X%c%c%c%c%X%X%X\n", essid9, z, essid10, bssid13, bssid15, bssid16, x, y, z);
 
     return 0;
 }
