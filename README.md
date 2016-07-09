@@ -9,3 +9,6 @@ Clone or download this repository and execute `make` inside the directory.
 ## Usage
 
 `./speedport_gen WLAN-XXXXXX XX:XX:XX:XX:XX:XX`
+
+## Tested on
+- Speedport W 700V
